@@ -10,7 +10,16 @@
   --secondaryColor:rgb(184, 182, 176);
   --primarylightColor:rgb(42, 159, 232);
   --primaryBgColor:rgb(252, 249, 241);
-  --lightColor:rgb(249, 243, 238)
+  /* lightcolor split complementary */
+  --lightColor:rgb(249, 243, 238);
+  --lightColor2:rgb(242,248,252);
+  --lightColor3:rgb(243,242,252);
+  /* darkcolor base #D7B043 Tetradic */
+
+  --darkColorbase: rgb(215,176,67);
+  --darkColor: rgb(105,215,66);
+  --darkColor2: rgb(66,105,215);
+  --darkColor3: rgb(175,66,215);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -21,6 +30,8 @@ h1,h2,h3,h4,h5,h6{
 body{
   background-color: var(--primaryBgColor);
   font-family: 'Playfair Display', serif;
+
+  
 }
 
 /* *************************************navbar*************************************** */
@@ -32,7 +43,7 @@ body{
   align-items: center;
   background-color: transparent;
   
-  height: 10vh;
+  height: auto;
   font-size: 2em;
 
   border-bottom: solid black 1px;
@@ -110,8 +121,8 @@ body{
   display: block;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .2s ease all;
-  transition: .2s ease all;
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
 
   border-radius: 2px;
   height: 2px;
@@ -146,4 +157,175 @@ body{
   .nav-toggle{
     display: none;
   }
+}
+/* *************************************Place Holder*************************************** */
+.place-holder{
+  width: 100%;
+  height: 100vh;
+}
+
+/* *************************************Footer*************************************** */
+
+.footer-control{
+  width: 100%;
+  height: 30vh;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  position: relative;
+
+  border-top: solid 1px var(--primaryColor);
+  padding-top: 1em;
+}
+
+.footer-list{
+  list-style: none;
+}
+
+.footer-copyright{
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon{
+  font-size: 1em;
+  color:var(--primaryColor);
+}
+
+.icon:hover{
+  font-size: 1.5em;
+}
+
+@media all and (max-width:760px) {
+  .footer-control {
+    flex-direction: column;
+    align-items: center;
+
+    height: auto;
+    padding-bottom: 1em;
+  }
+
+  .footer-copyright {
+    
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    transform: none;
+  }
+}
+
+/* *************************************About*************************************** */
+      
+  
+.about-container{
+  width: 100%;
+  height: 80vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.about-content-container{
+  width: 50%;
+  text-align: center;
+
+}
+
+@media all and (max-width:760px) {
+  .about-container{
+    height: auto;
+  }
+}
+  
+
+/* *************************************Home*************************************** */
+
+/* >>>>>>>>>>>>>>Hero-head>>>>>>>>>>>>>>>> */
+.hero-head-container{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.circle-container{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-image:url(./pictures/forjavascript.jpg) ;
+  background-repeat: no-repeat;
+  
+  background-size:cover;
+  background-position:center ;
+  opacity: 0.9;
+  margin: 0;
+
+  
+
+ 
+  
+}
+.welcome{
+  
+  
+}
+
+.horizontal-line{
+  height: 2px;
+  width: 70vw;
+  background-color: var(--primaryColor);
+
+  
+}
+
+/* >>>>>>>>>>>>>>Hero-text>>>>>>>>>>>>>>>> */
+.hero-text-container{
+  height: 50vh;
+  width: 50%;
+  
+  margin: auto;
+
+
+}
+
+/* >>>>>>>>>>>>>>Button-container>>>>>>>>>>>>>>>> */
+.hero-button-container {
+  
+  width: 50%;
+  height: 10vh;
+
+  margin: auto;
+
+  position: relative;
+
+}
+
+.CV-download-btn{
+  position: absolute;
+  right: 20%;
+  padding: 1em;
+  border:none;
+  border-radius: 1em;
+  background-color: var(--darkColor2);
+}
+
+.CV-download-btn:hover{
+  animation-name: btn-animation;
+  animation-duration: 0.5s;
+}
+
+@keyframes btn-animation {
+  from{background: var(--darkColor2);}
+  to{background: linear-gradient(to right, red, yellow);}
 }

@@ -10,6 +10,11 @@ function Navbar() {
         <h1>logo</h1>
       </Link>
       <ul className="nav-links-container">
+        <li className="nav-link">
+          <Link to="/" className="link-component">
+            <h3>Home</h3>
+          </Link>
+        </li>
         {navLinks.map((link, index) => {
           return (
             <li key={index} className="nav-link">
