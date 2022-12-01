@@ -1,5 +1,6 @@
-**This project is still under developing**
-**check the demo here [DEMO](https://welcome-to-yao-website.netlify.app/)**
+# This project is still under developing
+
+# check the demo here [DEMO](https://welcome-to-yao-website.netlify.app/)
 
 # Getting Started with Create React App
 
