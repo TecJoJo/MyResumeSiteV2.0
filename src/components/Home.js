@@ -11,6 +11,10 @@ function Home() {
       <section className="hero-text-container">
         <h1>Welcome to my website</h1>
         <br />
+        <h2>This project is still under development</h2>
+        <br />
+        <h2>Tämä projecti on vielä tyän alla</h2>
+        <br />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
           aliquam amet ea deleniti saepe, iusto exercitationem rerum quidem
