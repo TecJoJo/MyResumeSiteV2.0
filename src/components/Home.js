@@ -27,7 +27,9 @@ function Home() {
         </p>
       </section>
       <section className="hero-button-container">
-        <button className="CV-download-btn">Download CV from here</button>
+        <button className="CV-download-btn">
+          <h1>Download CV</h1>
+        </button>
       </section>
     </>
   );
