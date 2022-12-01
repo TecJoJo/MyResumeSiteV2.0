@@ -13,7 +13,7 @@ function Home() {
         <br />
         <h2>This project is still under development</h2>
         <br />
-        <h2>Tämä projecti on vielä tyän alla</h2>
+        <h2>Tämä projecti on vielä työn alla</h2>
         <br />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
