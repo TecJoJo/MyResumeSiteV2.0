@@ -313,6 +313,10 @@ body{
 
 }
 
+.CV-download-btn a{
+  text-decoration: none;
+}
+
 .CV-download-btn{
   position: absolute;
   right: 20%;

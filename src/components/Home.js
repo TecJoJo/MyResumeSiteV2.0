@@ -32,7 +32,9 @@ function Home() {
       </section>
       <section className="hero-button-container">
         <button className="CV-download-btn">
-          <h1>Download CV</h1>
+          <a href="https://drive.google.com/file/d/1-2GFwmgTOxkTwRL64wUvB9CrVHkbzEfl/view?usp=share_link">
+            <h1>Download CV</h1>
+          </a>
         </button>
       </section>
     </>
