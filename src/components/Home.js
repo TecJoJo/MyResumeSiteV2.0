@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -32,7 +33,10 @@ function Home() {
       </section>
       <section className="hero-button-container">
         <button className="CV-download-btn">
-          <a href="https://drive.google.com/file/d/1-2GFwmgTOxkTwRL64wUvB9CrVHkbzEfl/view?usp=share_link">
+          <a
+            href="https://drive.google.com/file/d/1-2GFwmgTOxkTwRL64wUvB9CrVHkbzEfl/view?usp=share_link"
+            download={true}
+          >
             <h1>Download CV</h1>
           </a>
         </button>
