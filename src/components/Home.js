@@ -34,7 +34,7 @@ function Home() {
       <section className="hero-button-container">
         <button className="CV-download-btn">
           <a
-            href="https://drive.google.com/file/d/1-2GFwmgTOxkTwRL64wUvB9CrVHkbzEfl/view?usp=share_link"
+            href="https://drive.google.com/uc?export=download&id=1-2GFwmgTOxkTwRL64wUvB9CrVHkbzEfl"
             download={true}
           >
             <h1>Download CV</h1>
