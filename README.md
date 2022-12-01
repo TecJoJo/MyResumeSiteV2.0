@@ -1,4 +1,5 @@
-#This project is still uder developing
+#This project is still under developing#
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
