@@ -305,7 +305,7 @@ body{
 .hero-button-container {
   
   width: 50%;
-  height: 10vh;
+  height: 20vh;
 
   margin: auto;
 
@@ -318,8 +318,12 @@ body{
 }
 
 .CV-download-btn{
+  
+
   position: absolute;
   right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
  
   padding: 1em;
   border: none;
