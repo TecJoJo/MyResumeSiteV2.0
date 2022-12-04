@@ -362,6 +362,7 @@ body{
 
 /* *************************************Project*************************************** */
 
+
 .single-project-container{
   height: 90vh;
   width: 100%;
@@ -374,7 +375,7 @@ body{
   align-items: center;
 
   background-color: transparent;
-  transition: all 1s linear;
+  transition: background-color 1s linear;
 }
 
 .single-project-container h1{
@@ -393,24 +394,30 @@ body{
 
   overflow:hidden;
 
-  transition: all 1s linear;
+  transition: width 1s linear;
 
 }
 
-.single-project-image-container:hover{
-  width: 30%;
-
-}
 
 .project-image{
   width: 100%;
   height: 100%;
-
+  
   object-fit:cover;
-
+  
   opacity: 0.8;
 }
 
+/* >>>>>>>>>>>>>>project hover effect >>>>>>>>>>>>>>>> */
+
+.effect .single-project-image-container{
+  width: 30%;
+
+}
+
+.effect {
+  background-color: var(--darkColor2-varient1);
+}
 
 
 
