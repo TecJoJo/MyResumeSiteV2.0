@@ -22,7 +22,7 @@ function Project(props) {
     return (
       <section ref={wrapper} className="single-project-container">
         <div className="single-project-image-container">
-          <a href={props.url}>
+          <a href={props.url} target="blank">
             <img
               src={props.img}
               alt={props.imgName}
@@ -44,7 +44,7 @@ function Project(props) {
       <section ref={wrapper} className="single-project-container">
         <h1>{props.subtitle}</h1>
         <div className="single-project-image-container">
-          <a href={props.url}>
+          <a href={props.url} target="blank">
             <img
               src={props.img}
               alt={props.imgName}

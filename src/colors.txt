@@ -1,0 +1,21 @@
+  --primaryColor:rgb(0,0,0);
+  --secondaryColor:rgb(184, 182, 176);
+  --primarylightColor:rgb(42, 159, 232);
+  --primaryBgColor:rgb(252, 249, 241);
+  /* lightcolor split complementary */
+  --lightColor:rgb(249, 243, 238);
+  --lightColor2:rgb(242,248,252);
+  --lightColor3:rgb(243,242,252);
+  /* darkcolor base #D7B043 Tetradic */
+
+  --darkColorbase: rgb(215,176,67);
+  --darkColor: rgb(105,215,66);
+  --darkColor2: rgb(66,105,215);
+  --darkColor3: rgb(175,66,215);
+  /* color variants */
+  --darkColor2-varient1: rgb(93,127,221);
+
+  test1
+    #C0EEE4
+    #FFCAC8
+    #F8F988
