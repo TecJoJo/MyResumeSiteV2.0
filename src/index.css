@@ -34,6 +34,7 @@ body{
   font-family: 'Playfair Display', serif;
 
   
+  
 }
 
 /* *************************************navbar*************************************** */
@@ -375,11 +376,11 @@ body{
   align-items: center;
 
   background-color: transparent;
-  transition: background-color 1s linear;
+  transition: background-color 1s ease-out;
 }
 
 .single-project-container h1{
-  font-size: 5rem;
+  font-size: 3rem;
   width: 40%;
 
   
@@ -390,11 +391,11 @@ body{
   aspect-ratio: 1/1;
 
   border: solid 1px var(--primaryColor);
-  border-radius: 5%;
+  border-radius: 2%;
 
   overflow:hidden;
 
-  transition: width 1s linear;
+  transition: width 1s ease-out;
 
 }
 
@@ -415,9 +416,6 @@ body{
 
 }
 
-.effect {
-  background-color: var(--darkColor2-varient1);
-}
 
 
 
