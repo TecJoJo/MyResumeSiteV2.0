@@ -302,6 +302,12 @@ body{
 
 }
 
+/* >>>>>>>>>>>>>>progressbar>>>>>>>>>>>>>>>> */
+.blank-space{
+  height: 30vh;
+  width: 100%;
+}
+
 /* >>>>>>>>>>>>>>Button-container>>>>>>>>>>>>>>>> */
 .hero-button-container {
   

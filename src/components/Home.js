@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CV from "../sources/YaoLuCV.pdf";
+import Progressbar from "./Progressbar";
 
 function Home() {
   return (
@@ -39,6 +40,47 @@ function Home() {
           </a>
         </button>
       </section>
+      <div className="blank-space"></div>
+      <Progressbar
+        skill="React.js"
+        skillColor="pink"
+        score={70}
+        duration={2000}
+        bgcolor1="rgb(66, 197, 245,0.3)"
+        bgcolor2="rgb(201, 125, 245,0.8)"
+      />
+      <Progressbar
+        skill="React.js"
+        skillColor="pink"
+        score={70}
+        duration={2000}
+        bgcolor1="rgb(66, 197, 245,0.3)"
+        bgcolor2="rgb(201, 125, 245,0.8)"
+      />
+      <Progressbar
+        skill="React.js"
+        skillColor="pink"
+        score={70}
+        duration={2000}
+        bgcolor1="rgb(66, 197, 245,0.3)"
+        bgcolor2="rgb(201, 125, 245,0.8)"
+      />
+      <Progressbar
+        skill="React.js"
+        skillColor="pink"
+        score={70}
+        duration={2000}
+        bgcolor1="rgb(66, 197, 245,0.3)"
+        bgcolor2="rgb(201, 125, 245,0.8)"
+      />
+      <Progressbar
+        skill="React.js"
+        skillColor="pink"
+        score={70}
+        duration={2000}
+        bgcolor1="rgb(66, 197, 245,0.3)"
+        bgcolor2="rgb(201, 125, 245,0.8)"
+      />
     </>
   );
 }

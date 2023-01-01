@@ -1,0 +1,66 @@
+.root{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+   position: relative; 
+   width:100%;
+   height: auto;
+   background-color: transparent;
+   margin: 0.5rem auto;
+
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+
+   
+
+   
+   
+}
+
+.skill{
+    margin-right: 5%;
+    text-transform: uppercase;
+
+}
+
+.bar-frame{
+    position: relative;
+    
+    width:50%;
+    border: solid 1px black;
+    border-radius: 2rem;
+    text-align: center;
+    overflow: hidden;
+    height: 2.5rem;
+}
+
+.bar-fill{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: antiquewhite;
+    height: 100%;
+    z-index: 0;
+}
+
+.indicator{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    
+    z-index: 99;
+    font-size: 2rem;
+
+    
+}
+
+.container p{
+    
+    margin:0.5rem;
+    
+}
