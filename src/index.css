@@ -302,11 +302,6 @@ body{
 
 }
 
-/* >>>>>>>>>>>>>>progressbar>>>>>>>>>>>>>>>> */
-.blank-space{
-  height: 30vh;
-  width: 100%;
-}
 
 /* >>>>>>>>>>>>>>Button-container>>>>>>>>>>>>>>>> */
 .hero-button-container {
@@ -317,7 +312,7 @@ body{
   margin: auto;
 
   position: relative;
-
+  
 }
 
 .CV-download-btn a{
@@ -326,12 +321,12 @@ body{
 
 .CV-download-btn{
   
-
+  
   position: absolute;
   right: 20%;
   top: 50%;
   transform: translateY(-50%);
- 
+  
   padding: 1em;
   border: none;
   
@@ -343,7 +338,7 @@ body{
 .CV-download-btn::after, .CV-download-btn::before{
   
   content: "";
-
+  
   position: absolute;
   left:-2px;
   top:-2px;
@@ -352,12 +347,12 @@ body{
   height:100%;
   
   border: solid 2px var(--primaryColor);
-
+  
   z-index: -1;
   
   transition: transform 0.3s ease ;
 }
- 
+
 .CV-download-btn:hover::after{
   transform: translate(-5px,-5px);
 }
@@ -365,7 +360,17 @@ body{
 .CV-download-btn:hover::before{
   transform: translate(5px,5px);
 }
- 
+
+/* >>>>>>>>>>>>>>progressbar>>>>>>>>>>>>>>>> */
+.blank-space{
+  height: 30vh;
+  width: 100%;
+}
+
+.skillTitle{
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 /* *************************************Project*************************************** */
 

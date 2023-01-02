@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { useSpring, animated } from "@react-spring/web";
 import "./progressbar.css";
 
 function Progressbar({
+  togglePoint,
+  top,
   skill,
   skillColor,
   score,
@@ -23,6 +25,18 @@ function Progressbar({
     number: isMax ? percentage : 0,
     config: { duration: duration },
   });
+
+  // if (togglePoint && top && top < togglePoint) {
+  //   SetIsMax(true);
+  // }
+  useEffect(() => {
+    if (top < togglePoint) {
+      SetIsMax(true);
+    } else {
+      SetIsMax(false);
+    }
+  });
+
   return (
     <div className="container">
       <h2 className="skill" style={{ color: skillColor }}>
