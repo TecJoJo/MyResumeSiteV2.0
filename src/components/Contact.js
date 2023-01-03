@@ -12,11 +12,13 @@ function Contact() {
           target="blank"
         >
           <p>Send me a message</p>
-          <label htmlFor="name">Your name please?</label>
+          <label htmlFor="name">Your name:</label>
           <input type="text" name="name" />
-          <label htmlFor="company">Your company please?</label>
+          <label htmlFor="name">Email address:</label>
+          <input type="text" name="email" />
+          <label htmlFor="company">Company:</label>
           <input type="text" name="company" />
-          <label htmlFor="message"></label>
+          <label htmlFor="message">Please leave me message here</label>
           <textarea name="message" id="" cols="30" rows="10"></textarea>
           <button type="submit">submit</button>
         </form>
