@@ -94,6 +94,8 @@ body{
       transition: all 0.5s ease-out;
       
       overflow: hidden;
+
+      z-index: 999;
     }
 
     .link-component:hover {
@@ -369,9 +371,16 @@ body{
 
 .skillTitle{
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
+@media screen and (max-width:500px) {
+  .hero-text-container{
+    width: 80%;
+
+  }
+
+}
 /* *************************************Project*************************************** */
 
 
@@ -390,11 +399,32 @@ body{
   transition: background-color 1s ease-out;
 }
 
+
+
 .single-project-container h1{
   font-size: 3rem;
   width: 40%;
 
   
+}
+
+@media screen and (max-width:800px) and (min-width:500px) {
+  .single-project-container h1{
+    font-size: 1.5rem;
+  }
+
+  .single-project-container{
+    height: 40vh;
+  }
+}
+@media screen and (max-width:500px){
+  .single-project-container h1{
+    font-size: 0.5rem;
+  }
+
+  .single-project-container{
+    height: 30vh;
+  }
 }
 
 .single-project-image-container{
@@ -465,6 +495,17 @@ body{
   
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (max-width:800px) and (min-width:500px){
+  .contact-form{
+    width: 60%;
+  }
+}
+@media screen and (max-width:500px) {
+  .contact-form{
+    width: 90%;
+  }
 }
 
 .contact-form p{

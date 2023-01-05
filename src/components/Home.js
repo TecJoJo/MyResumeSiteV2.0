@@ -13,7 +13,7 @@ function Home() {
     try {
       const { top, height } =
         progressbarWrapper.current.getBoundingClientRect();
-      const togglePoint = windowInnerHeight - height;
+      const togglePoint = windowInnerHeight - height / 2;
       setDimensions({ top, height, togglePoint });
       console.log(top, height, windowInnerHeight, togglePoint);
     } catch (TypeError) {}
@@ -61,7 +61,7 @@ function Home() {
         </button>
       </section>
       <div className="blank-space"></div>
-      <h1 className="skillTitle">Programming Stacks</h1>
+      <h1 className="skillTitle">Programming skills</h1>
       <div ref={progressbarWrapper} className="progressbar-wrapper">
         <Progressbar
           togglePoint={dimensions.togglePoint}
@@ -88,7 +88,7 @@ function Home() {
           top={dimensions.top}
           skill="typescript"
           skillColor="pink"
-          score={30}
+          score={40}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
           bgcolor2="rgb(201, 125, 245,0.8)"
@@ -108,7 +108,7 @@ function Home() {
           top={dimensions.top}
           skill="Python"
           skillColor="purple"
-          score={40}
+          score={50}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
           bgcolor2="rgb(201, 125, 245,0.8)"

@@ -42,14 +42,16 @@ function Progressbar({
       <h2 className="skill" style={{ color: skillColor }}>
         {skill}:
       </h2>
-      <p>Beginner</p>
-      <div className="bar-frame" onClick={() => SetIsMax(!isMax)}>
-        <animated.div className="bar-fill" style={{ ...props }} />
-        <animated.div className="indicator" style={percentageProps}>
-          {percentageProps.number.to((value) => `${Math.floor(value)}%`)}
-        </animated.div>
+      <div className="bar-wrapper">
+        <p>Beginner</p>
+        <div className="bar-frame">
+          <animated.div className="bar-fill" style={{ ...props }} />
+          <animated.div className="indicator" style={percentageProps}>
+            {percentageProps.number.to((value) => `${Math.floor(value)}%`)}
+          </animated.div>
+        </div>
+        <p>Expert</p>
       </div>
-      <p>Expert</p>
     </div>
   );
 }
