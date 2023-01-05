@@ -7,7 +7,7 @@ function Navbar() {
   return (
     <section className="nav-center">
       <Link to={"/"} className="link-component">
-        <h1>logo</h1>
+        <h1 className="signature">Coded By Yao</h1>
       </Link>
       <ul className="nav-links-container">
         <li className="nav-link">

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&family=Roboto:wght@100&display=swap');
+
 /* *************************************global*************************************** */
 *{
   box-sizing: border-box;
@@ -38,6 +40,10 @@ body{
 }
 
 /* *************************************navbar*************************************** */
+.signature{
+  font-family: 'Great Vibes', cursive;
+  font-weight: 100;
+}
 
 .nav-center{
   display: flex;
@@ -49,8 +55,10 @@ body{
   height: auto;
   font-size: 2em;
 
-  border-bottom: solid black 1px;
-  
+  border-bottom: 1px solid var(--primaryColor);
+  padding: 1rem 0;
+
+  box-shadow: 1px 1px 5px var(--primaryColor);
 
 }
 .nav-links-container{
@@ -105,6 +113,10 @@ body{
 
     .OpenMenu{
       height:50%;
+    }
+
+    .signature{
+      font-size: 1rem;
     }
 
 
