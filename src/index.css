@@ -313,7 +313,28 @@ body{
   
   margin: auto;
 
+  font-size: 1.5rem;
 
+
+}
+
+.date-and-time{
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.date-and-time span{
+  font-size: larger;
+  font-weight: bolder;
+  
+}
+
+.text-github-link{
+  font-weight: bolder;
+  font-size: larger;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--darkColor2);
 }
 
 

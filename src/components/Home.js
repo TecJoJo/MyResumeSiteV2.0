@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import CV from "../sources/YaoLuCV.pdf";
 import Progressbar from "./Progressbar";
 import { useRef, useEffect } from "react";
+import moment from "moment";
 
 function Home() {
   const windowInnerHeight = window.innerHeight;
   const progressbarWrapper = useRef(null);
   const [dimensions, setDimensions] = useState({});
+  const [time, setTime] = useState(
+    moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
+  );
 
   const calculateOffset = () => {
     try {
@@ -15,7 +19,7 @@ function Home() {
         progressbarWrapper.current.getBoundingClientRect();
       const togglePoint = windowInnerHeight - height / 2;
       setDimensions({ top, height, togglePoint });
-      console.log(top, height, windowInnerHeight, togglePoint);
+      // console.log(top, height, windowInnerHeight, togglePoint);
     } catch (TypeError) {}
   };
   useEffect(() => {
@@ -24,6 +28,16 @@ function Home() {
     //   window.removeEventListener("scroll", calculateOffset);
     // };
   }, []);
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setTime(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+    }, 1000);
+    return () => {
+      clearTimeout(timeOut);
+    };
+  }, [time]);
+
   return (
     <>
       <section className="hero-head-container">
@@ -34,24 +48,24 @@ function Home() {
       <section className="hero-text-container">
         <h1>Welcome to my website</h1>
         <br />
-        <h2>This project is still under development</h2>
-        <br />
-        <h2>Tämä projecti on vielä työn alla</h2>
-        <br />
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-          aliquam amet ea deleniti saepe, iusto exercitationem rerum quidem
-          tempora optio impedit repudiandae doloremque quia est fugit possimus
-          similique blanditiis laudantium esse. Inventore mollitia quo,
-          molestiae et saepe, consequatur quisquam optio, quia voluptas ipsa
-          blanditiis quam ipsam quas! Deserunt voluptas, nemo ipsum quos tempora
-          molestias fugiat cum mollitia deleniti corporis nobis! Quae libero
-          autem earum voluptatibus nihil, quod dolorem eaque tenetur sunt
-          perspiciatis a consectetur soluta unde voluptates quibusdam, sapiente
-          dolorum commodi hic maxime? Culpa eum suscipit dolores nam deserunt
-          consequuntur, natus animi, ducimus, officiis consectetur itaque
-          distinctio minima eos voluptate!
+          Hi, I am Yao Lu, from Häemeen University of Applied Sciences (HAMK)
+          Finland. My major is information and communication technology. This is
+          the second website made by me. This project is made mostly with
+          React.js, CSS3, and HTML5. The reason that I decide to make this
+          project is trying to enhance my understanding of those programming
+          techniques above and showcase my web-development skills. Check the
+          source code{" "}
+          <a
+            className="text-github-link"
+            href="https://github.com/TecJoJo/MyReactResumeWebsite"
+          >
+            here
+          </a>
+          .
         </p>
+        <p className="date-and-time">{time}</p>
       </section>
       <section className="hero-button-container">
         <button className="CV-download-btn">
