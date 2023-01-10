@@ -50,7 +50,7 @@ function Home() {
         <br />
 
         <p>
-          Hi, I am Yao Lu, from Häemeen University of Applied Sciences (HAMK)
+          Hi, I am Yao Lu, from Hämeen University of Applied Sciences (HAMK)
           Finland. My major is information and communication technology. This is
           the second website made by me. This project is made mostly with
           React.js, CSS3, and HTML5. The reason that I decide to make this
