@@ -75,8 +75,11 @@ function Home() {
         </button>
       </section>
       <div className="blank-space"></div>
-      <h1 className="skillTitle">Programming skills</h1>
-      <div ref={progressbarWrapper} className="progressbar-wrapper">
+      <secton className="home-card">
+
+      
+      <div ref={progressbarWrapper} className="progressbar-wrapper"> 
+        
         <Progressbar
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
@@ -127,7 +130,9 @@ function Home() {
           bgcolor1="rgb(66, 197, 245,0.3)"
           bgcolor2="rgb(201, 125, 245,0.8)"
         />
+        <h1 className="skillTitle">Programming skills</h1>
       </div>
+      </secton>
     </>
   );
 }
