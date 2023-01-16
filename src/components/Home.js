@@ -4,8 +4,19 @@ import CV from "../sources/YaoLuCV.pdf";
 import Progressbar from "./Progressbar";
 import { useRef, useEffect } from "react";
 import moment from "moment";
+// flip related 
+import { useSpring, animated,config} from "@react-spring/web";
 
 function Home() {
+  //flip functionality
+  // const [flipped, set] = useState(false)
+  // const { transform, opacity } = useSpring({
+  //   opacity: flipped ? 1 : 1,
+  //   transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+  //   config: config.molasses,
+  // })
+  //end of flip functionality
+
   const windowInnerHeight = window.innerHeight;
   const progressbarWrapper = useRef(null);
   const [dimensions, setDimensions] = useState({});
@@ -75,16 +86,16 @@ function Home() {
         </button>
       </section>
       <div className="blank-space"></div>
-      <secton className="home-card">
+      <section className="home-card" >{/*onClick={()=>{set(flipped?!flipped:!flipped)}}*/}
 
       
-      <div ref={progressbarWrapper} className="progressbar-wrapper"> 
+      <div ref={progressbarWrapper}  className="progressbar-wrapper">{/*style={{opacity,transform}}*/ }
         
         <Progressbar
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
           skill="React.js"
-          skillColor="blue"
+          skillColor="green"
           score={75}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
@@ -104,7 +115,7 @@ function Home() {
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
           skill="typescript"
-          skillColor="pink"
+          skillColor="green"
           score={40}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
@@ -114,7 +125,7 @@ function Home() {
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
           skill="C#"
-          skillColor="orange"
+          skillColor="green"
           score={50}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
@@ -124,7 +135,7 @@ function Home() {
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
           skill="Python"
-          skillColor="purple"
+          skillColor="green"
           score={50}
           duration={2000}
           bgcolor1="rgb(66, 197, 245,0.3)"
@@ -132,7 +143,7 @@ function Home() {
         />
         <h1 className="skillTitle">Programming skills</h1>
       </div>
-      </secton>
+      </section>
     </>
   );
 }

@@ -4,6 +4,7 @@ function About() {
   return (
     <div className="about-container">
       <section className="about-content-container">
+        
         <h1>About me</h1>
         <p>
           Hi, I am Yao Lu, from Häemeen University of Applied Sciences (HAMK)
@@ -20,8 +21,8 @@ function About() {
           ourselves to reach our goals. And persistence is the key to success.
           That’s why I never give up.
         </p>
-        <br />
-        <br />
+        
+        
         <br />
         <h1>About this project</h1>
         <p>
@@ -49,6 +50,7 @@ function About() {
           <br />
           Regardless of the challenges I really enjoyed this project and want to
           make it so much better, but I know it’s time to move on.
+          
         </p>
       </section>
     </div>
