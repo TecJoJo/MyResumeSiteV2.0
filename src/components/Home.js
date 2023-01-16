@@ -28,7 +28,7 @@ function Home() {
     try {
       const { top, height } =
         progressbarWrapper.current.getBoundingClientRect();
-      const togglePoint = windowInnerHeight - height / 2;
+      const togglePoint = windowInnerHeight - height;
       setDimensions({ top, height, togglePoint });
       // console.log(top, height, windowInnerHeight, togglePoint);
     } catch (TypeError) {}
