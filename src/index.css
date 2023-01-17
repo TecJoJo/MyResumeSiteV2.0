@@ -219,6 +219,16 @@ body{
   font-size: 1.5em;
 }
 
+.footer-get-in-touch{
+  margin: 0.5rem 0;
+  text-align: center;
+
+}
+
+.footer-icon-container{
+  margin: auto;
+}
+
 @media all and (max-width:760px) {
   .footer-control {
     flex-direction: column;
@@ -226,6 +236,8 @@ body{
 
     height: auto;
     padding-bottom: 1em;
+
+    font-size: 1rem;
   }
 
   .footer-copyright {
@@ -425,7 +437,7 @@ body{
   width: 50%;
   margin: auto;
 
-  background-color:#cacce3;
+  background-color:var(--lightColor2);
 
   padding: 1rem 1rem 0 1rem ;
 
