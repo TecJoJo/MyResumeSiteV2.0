@@ -334,6 +334,14 @@ body{
 
 }
 
+@media screen and (max-width:500px) {
+  .hero-text-container{
+    width: 80%;
+
+  }
+
+}
+
 .date-and-time{
   margin: 1rem 3rem 0 0;
   text-align: right;
@@ -350,6 +358,8 @@ body{
   text-transform: uppercase;
   color: var(--darkColor2);
 }
+
+
 
 
 /* >>>>>>>>>>>>>>Button-container>>>>>>>>>>>>>>>> */
@@ -410,11 +420,36 @@ body{
   transform: translate(5px,5px);
 }
 
-/* >>>>>>>>>>>>>>progressbar>>>>>>>>>>>>>>>> */
 .blank-space{
   height: 0;
   width: 100%;
 }
+/* >>>>>>>>>>>>>>>>>>>>>>>>>flipcard>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.flip-card-container{
+
+
+
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  margin: auto;
+
+  overflow: hidden;
+
+}
+@media screen and (max-width:500px){
+  .flip-card-container{
+      width: 80%;
+  }
+}
+/* >>>>>>>>>>>>>>progressbar>>>>>>>>>>>>>>>> */
+
 
 .skillTitle{
   text-align: center;
@@ -425,32 +460,43 @@ body{
 
 }
 
-@media screen and (max-width:500px) {
-  .hero-text-container{
-    width: 80%;
 
-  }
-
-}
 
 .progressbar-wrapper{
   width: 50%;
-  margin: auto;
+  
 
   background-color:var(--lightColor2);
 
-  padding: 1rem 1rem 0 1rem ;
-
+  
+  padding: 1rem 1rem 0 1rem;
   
 
-  margin-bottom: 2rem;
+  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  position: absolute;
+
+  z-index: 99;
 }
-@media screen and (max-width:500px){
-  .progressbar-wrapper{
-      width: 80%;
-  }
+
+/* >>>>>>>>>>>>>>flipcard backside>>>>>>>>>>>>>>>> */
+.flipcard-backside{
+
+  background-image: url(https://cutewallpaper.org/21/javascript-wallpaper/JavaScript-Wallpapers-Wallpaper-Cave.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 0px;
+  height: 0px;
+
+  position: absolute;
+
+  z-index: -1;
+
 }
+
+
 /* *************************************Project*************************************** */
 
 
