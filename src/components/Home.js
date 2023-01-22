@@ -73,7 +73,7 @@ function Home() {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setTime(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
-    }, 100000);
+    }, 1000);
     return () => {
       clearTimeout(timeOut);
     };
