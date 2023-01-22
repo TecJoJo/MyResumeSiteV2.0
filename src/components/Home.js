@@ -4,6 +4,9 @@ import CV from "../sources/YaoLuCV.pdf";
 import Progressbar from "./Progressbar";
 import { useRef, useEffect } from "react";
 import moment from "moment";
+import { useSpring,animated,config } from "@react-spring/web";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotate } from "@fortawesome/free-solid-svg-icons";
 
 
 function Home() {
@@ -16,6 +19,14 @@ function Home() {
   const [time, setTime] = useState(
     moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
   );
+
+  //flipcard effect 
+  const [flipped, set] = useState(false);
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+    config:config.gentle
+  });
  
   
   //initial track of the dimension useState after the initial render
@@ -116,11 +127,15 @@ function Home() {
         </button>
       </section>
       <div className="blank-space"></div>
-      <section className="flip-card-container" >
+      <section className="flip-card-container"  onClick={() => set((flipped) => !flipped)}>
 
       
-      <div ref={progressbarWrapper}  className="progressbar-wrapper">
-        
+      <animated.div 
+      ref={progressbarWrapper}
+      className="progressbar-wrapper"
+      style={{opacity:opacity.to(o=>1 - o),transform}}
+      >
+        <h1 className="attention">flip the card to check more info</h1>
         <Progressbar
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
@@ -172,10 +187,40 @@ function Home() {
           bgcolor2="rgb(201, 125, 245,0.8)"
         />
         <h1 className="skillTitle">Programming skills</h1>
-      </div>
-      <div className="flipcard-backside" ref={flipcardBackside}>
+        <div className="rotation-controll">
+          <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+          
+        </div>
+      </animated.div>
+      <animated.div 
+      className="flipcard-backside" 
+      ref={flipcardBackside}
+      style={{opacity,transform,rotateY:"180deg",}}
+      >
+        <h1 className="attention">flip the card to check more info</h1>
+        <div className="flipcard-grid">
+          <h3>Education</h3>
+          <p>1.2022-2024(estimatd)</p>
+          <p>Hämeen University of Applied Sciences Information and communication engineering(in Finnish) </p>
 
-      </div>
+          <h3>Work Experience</h3>
+          <p>8.2019-1.2022</p>
+          <p>Atoy Car Workshop</p>
+
+          <h3>Hobbies</h3>
+          <p></p>
+          <p>Programming Movies TV-series</p>
+
+        </div>
+        <h1 className="skillTitle">Basic backgrounds</h1>
+
+        
+
+        <div className="rotation-controll">
+          <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+          
+        </div>
+      </animated.div>
       </section>
     </>
   );

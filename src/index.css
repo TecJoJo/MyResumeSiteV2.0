@@ -453,10 +453,27 @@ body{
 
 .skillTitle{
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 
   width: 100%;
 
+
+}
+
+.rotation-controll{
+  text-align: center;
+  padding-bottom: 1rem;
+
+  width: 100%;
+}
+
+.attention{
+  text-transform: capitalize;
+
+  text-align: center;
+  padding: 1rem;
+
+  width: 100%;
 
 }
 
@@ -483,9 +500,7 @@ body{
 /* >>>>>>>>>>>>>>flipcard backside>>>>>>>>>>>>>>>> */
 .flipcard-backside{
 
-  background-image: url(https://cutewallpaper.org/21/javascript-wallpaper/JavaScript-Wallpapers-Wallpaper-Cave.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: var(--lightColor3);
 
   width: 0px;
   height: 0px;
@@ -494,8 +509,22 @@ body{
 
   z-index: -1;
 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  overflow: hidden;
 }
 
+.flipcard-grid{
+  
+
+  margin: 1rem;
+
+  height: 70%;
+
+  display:grid;
+  grid-template-columns: 33% 33% auto;
+  grid-template-rows: 20% 20% 20%;
+}
 
 /* *************************************Project*************************************** */
 
