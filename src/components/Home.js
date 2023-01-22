@@ -136,6 +136,10 @@ function Home() {
       style={{opacity:opacity.to(o=>1 - o),transform}}
       >
         <h1 className="attention">flip the card to check more info</h1>
+        <div className="rotation-controll">
+          <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
+          
+        </div>
         <Progressbar
           togglePoint={dimensions.togglePoint}
           top={dimensions.top}
@@ -187,10 +191,7 @@ function Home() {
           bgcolor2="rgb(201, 125, 245,0.8)"
         />
         <h1 className="skillTitle">Programming skills</h1>
-        <div className="rotation-controll">
-          <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
-          
-        </div>
+       
       </animated.div>
       <animated.div 
       className="flipcard-backside" 
@@ -198,28 +199,29 @@ function Home() {
       style={{opacity,transform,rotateY:"180deg",}}
       >
         <h1 className="attention">flip the card to check more info</h1>
-        <div className="flipcard-grid">
-          <h3>Education</h3>
-          <p>1.2022-2024(estimatd)</p>
-          <p>Hämeen University of Applied Sciences Information and communication engineering(in Finnish) </p>
-
-          <h3>Work Experience</h3>
-          <p>8.2019-1.2022</p>
-          <p>Atoy Car Workshop</p>
-
-          <h3>Hobbies</h3>
-          <p></p>
-          <p>Programming Movies TV-series</p>
-
-        </div>
-        <h1 className="skillTitle">Basic backgrounds</h1>
-
-        
-
         <div className="rotation-controll">
           <FontAwesomeIcon icon={faRotate}></FontAwesomeIcon>
           
         </div>
+        <div className="flipcard-grid">
+          <p>Education</p>
+          <p>1.2022-2024(estimatd)</p>
+          <p>Hämeen University of Applied Sciences Information and communication engineering(in Finnish) </p>
+
+          <p>Work Experience</p>
+          <p>8.2019-1.2022</p>
+          <p>Atoy Car Workshop</p>
+
+          <p>Hobbies</p>
+          <p></p>
+          <p>Programming Movies TV-series</p>
+
+        </div>
+        <h1 className="skillTitle">Brief background info</h1>
+
+        
+
+       
       </animated.div>
       </section>
     </>
