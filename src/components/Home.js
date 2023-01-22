@@ -21,57 +21,40 @@ function Home() {
   //initial track of the dimension useState after the initial render
 
   useEffect(()=>{
-    //calculateOffset()
-    try {
-      console.log("this is the initial rendering");
-      console.log(progressbarWrapper.current.getBoundingClientRect());
-      const {top,height,width} =
-        progressbarWrapper.current.getBoundingClientRect();
-     
-      const togglePoint = windowInnerHeight - height;
-
-      setDimensions({ top, height, togglePoint, width});
-      console.log(flipcardBackside.current.getBoundingClientRect());
-      flipcardBackside.current.style.width = `${dimensions.width}px`;
-      flipcardBackside.current.style.height = `${dimensions.height}px`
-      console.log(flipcardBackside.current.getBoundingClientRect());
-      
-      console.log("dimentions setted");
-      
-      // console.log(top, height, windowInnerHeight, togglePoint);
-    } catch (TypeError) {}
+    calculateOffset()
+    
   },[])
 
   //callback, calculate the demensions of the flipcard front page.
   const calculateOffset = () => {
     try {
-      console.log(progressbarWrapper.current.getBoundingClientRect());
+      // console.log(progressbarWrapper.current.getBoundingClientRect());
       const {top,height,width} =
         progressbarWrapper.current.getBoundingClientRect();
      
       const togglePoint = windowInnerHeight - height;
 
       setDimensions({ top, height, togglePoint, width});
-      console.log(flipcardBackside.current);
+      // console.log(flipcardBackside.current);
       flipcardBackside.current.style.width = `${dimensions.width}px`;
       flipcardBackside.current.style.height = `${dimensions.height}px`
-      console.log("dimentions setted");
+      // console.log("dimentions setted");
       
       // console.log(top, height, windowInnerHeight, togglePoint);
     } catch (TypeError) {}
   };
   useEffect(() => {
-    console.log("scroll even litsener is added");
+    // console.log("scroll even litsener is added");
     
 
     window.addEventListener("scroll", calculateOffset);
-    console.log("resize even litsener is added");
+    // console.log("resize even litsener is added");
     window.addEventListener("resize", calculateOffset);
     return () => {
-      console.log("scroll even litsener is removed");
+      // console.log("scroll even litsener is removed");
       
       window.removeEventListener("scroll", calculateOffset);
-      console.log("resize even litsener is removed");
+      // console.log("resize even litsener is removed");
       window.removeEventListener("resize", calculateOffset)
     };
   },[dimensions]);
@@ -79,16 +62,23 @@ function Home() {
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setTime(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
-    }, 1000);
+    }, 100000);
     return () => {
       clearTimeout(timeOut);
     };
   }, [time]);
-
- 
-
+  
+  //set the flipcard-backside width and height as soon as component is rendered
+  try {
+    flipcardBackside.current.style.width = `${dimensions.width}px`;
+    flipcardBackside.current.style.height = `${dimensions.height}px`
+  } catch (error) {
+    console.log("component is not exsit");
+  }
+  
 
   // console.log("page render");
+  // console.log(dimensions);
   return (
     <>
       <section className="hero-head-container">
