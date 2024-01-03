@@ -1,31 +1,33 @@
-import React from "react";
+// THIS IS SO NO REACT WAY OF IMPLEMENTING THE HAMBURGER MENU NEED UPDATE 
 
-function HamburgerMenu() {
-  return (
-    <button
-      className="nav-toggle"
-      onClick={(e) => {
-        e.currentTarget.classList.toggle("opened");
-        // const element = e.currentTarget.previousElementSibling;
+// import React from "react";
 
-        // const cStyle = getComputedStyle(element);
+// function HamburgerMenu({className}) {
+//   return (
+//     <button
+//       className={`nav-toggle ${className}`}
+//       onClick={(e) => {
+//         e.currentTarget.classList.toggle("opened");
+//         // const element = e.currentTarget.previousElementSibling;
 
-        // const height = cStyle.getPropertyValue("height");
+//         // const cStyle = getComputedStyle(element);
 
-        // if (height === "0px") {
-        //   element.style.height = "50%";
-        // } else {
-        //   element.style.height = "0";
-        // }
+//         // const height = cStyle.getPropertyValue("height");
 
-        e.currentTarget.previousElementSibling.classList.toggle("OpenMenu");
-      }}
-    >
-      <span className="bar-top"></span>
-      <span className="bar-mid"></span>
-      <span className="bar-bot"></span>
-    </button>
-  );
-}
+//         // if (height === "0px") {
+//         //   element.style.height = "50%";
+//         // } else {
+//         //   element.style.height = "0";
+//         // }
 
-export default HamburgerMenu;
+//         e.currentTarget.previousElementSibling.classList.toggle("OpenMenu");
+//       }}
+//     >
+//       <span className="bar-top"></span>
+//       <span className="bar-mid"></span>
+//       <span className="bar-bot"></span>
+//     </button>
+//   );
+// }
+
+// export default HamburgerMenu;

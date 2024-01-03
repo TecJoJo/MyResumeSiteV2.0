@@ -1,0 +1,10 @@
+/* SeparateLine.css */
+
+.separate-line {
+    
+    border-left: 1px solid #000;
+    width: 1px;
+    height: 1.25rem;
+    margin: 0 2px;
+  }
+  
