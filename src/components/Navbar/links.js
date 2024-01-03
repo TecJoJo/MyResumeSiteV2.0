@@ -1,20 +1,30 @@
-import lightBulbIcon from "../../sources/icons/lightBulbGlow.svg";
-import humanIcon from "../../sources/icons/human.svg";
-import fileIcon from "../../sources/icons/fileIcon.svg";
+import AboutIcon from "../icons/AboutIcon";
+import CVIcon from "../icons/CVIcon";
+import ProjectsIcon from "../icons/ProjectsIcon";
+import HomeIcon from "../icons/HomeIcon";
+
+const home = {
+  url:"/",
+  name: "Home",
+  icon:HomeIcon
+}
 
 const about = {
+  url:"about",
   name: "About",
-  img: <img src={humanIcon} alt="humanIcon" className="header-icon" />,
-};
+  icon: AboutIcon
+}
 
 const projects = {
+  url:"projects",
   name: "Projects",
-  img: <img src={lightBulbIcon} alt="lightbulb" className="header-icon" />,
+  icon: ProjectsIcon
 };
 
 const cv = {
+  url:"cv",
   name: "CV",
-  img: <img src={fileIcon} alt="fileIcon" className="header-icon" />,
+  icon: CVIcon
 };
 
-export const navLinks = [about, projects, cv];
+export const navLinks = [home,about, projects, cv];

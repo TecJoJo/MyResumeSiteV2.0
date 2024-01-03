@@ -3,10 +3,10 @@ import { navLinks } from "./links";
 import { NavLink } from "react-router-dom";
 import SplitLine from "./seperateLine/SeperateLine";
 import languageIcon from "../../sources/icons/earth.svg";
-
+import "../../static/header.css"
 function Navbar() {
   return (
-    <nav className=" container-fluid   bg-body">
+    <nav className=" container-fluid   bg-body border-bottom ">
       <div className="row justify-content-between align-items-center ">
         <div className=" col-6">
           <ul style={{marginBottom:"0"}} className="d-flex  flex-row  align-content-center list-unstyled  ">
@@ -14,15 +14,17 @@ function Navbar() {
               return (
                 <li key={index} className=" text-decoration-none">
                   <NavLink
-                    to={link.name}
+                    to={link.url}
                     className="d-flex justify-content-center align-items-center nav-link  "
                   >
+
                     <div className="d-flex align-items-center ">
-                      <div className="me-1">{link.img}</div>
-                      <SplitLine/>
-                      <div>
+                    <div>
                         <small>{link.name}</small>
                       </div>
+                      
+                      <div className="me-1"><link.icon className={"header-icon"}/></div>
+                      <SplitLine/>
                     </div>
                   </NavLink>
                 </li>
@@ -30,7 +32,7 @@ function Navbar() {
             })}
           </ul>
         </div>
-        <h4 className="col-4 text-nowrap hand-writing">practice makes perfect</h4>
+        <h4 className="col-4 text-nowrap hand-writing gradient-text-by">Practice makes perfect</h4>
         <div className=" d-flex align-items-center col-2 justify-content-end ">
           <img className="header-icon"   src={languageIcon} alt="language Icon" />
           <p className="btn btn-outline-dark  m-0 p-0 small ">EN</p>

@@ -44,20 +44,37 @@
 
 }
 
-h1,h2,h3,h4,h5,h6{
+.roboto{
   font-family: 'Roboto', sans-serif;
 }
 
-p{
+.merriweather{
   font-family: 'Merriweather', serif;
 }
+
 .hand-writing{
   font-family: 'Shadows Into Light', cursive;
 }
 
+.gradient-text-bb{
+  
+  
+  background: var(--BlueBlueGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+} 
+.gradient-text-by{
+  
+  
+  background: var(--BlueYellowGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+} 
 /* *************************************body*************************************** */
 body{
-  background: var(--BlueBlueGradient);
+  background: var(--pureWhite);
   font-family: 'Roboto', sans-serif;
   color: var(--textPrimary)
 
