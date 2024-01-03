@@ -42,6 +42,8 @@
   --BlueYellowGradient: linear-gradient(to right, var(--primaryColor), var(--secondaryColor));
   --BlueBlueGradient: linear-gradient(to right, var(--textSecondary), var(--primaryColor));
 
+  /* bootstrap class overwrite */
+  
 }
 
 .roboto{

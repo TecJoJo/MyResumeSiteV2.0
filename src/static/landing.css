@@ -1,7 +1,6 @@
 .icon {
-    width: 1.5 rem;
-    height: 1.5 rem;
-    fill: var(--pureWhite)
-    
-  }
-  
+  width: 45px;
+  height: 45px;
+  color: var(--pureWhite);
+}
+
