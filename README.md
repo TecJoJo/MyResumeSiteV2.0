@@ -1,15 +1,32 @@
-# This project is still under continous development. 
+# About This Project
 
-# check the demo here [DEMO](https://welcome-to-yao-website.netlify.app/)
+This site is a redesign based on my original portfolio project.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br>
-## to deploy this project use command npm install, npm start <br>
-
-## this projects is based on React.js, animation effects used react-spring, routing used react-router-dom
-
-### design&coding by Yao Lu, from Hämeen University of Applied Sciences, Finland.  
+To check out the V1.0:
+- [GitHub Repository](https://github.com/TecJoJo/MyReactResumeWebsite)
+- [Live Website](https://welcome-to-yao-website.netlify.app/)
 
 
+# Hosting
 
+The site is hosted on Netlify. You can check it out [here](https://tecjojo.netlify.app/).
+
+
+# Features
+
+- React DOM
+- React project
+
+# Development Status
+
+The project is still under development.
+
+# Future Plans
+
+- [ ] Notification bar for the development status
+- [ ] Stack icons carousel
+- [ ] Contact page redesign
+- [ ] Backend support for the contact page
+
+### Design & Coding by Yao Lu
+From Hämeen University of Applied Sciences, Finland.
