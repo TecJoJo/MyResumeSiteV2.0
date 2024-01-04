@@ -24,7 +24,7 @@ function Landing() {
 
           <div className="col-md-6   ">
             <img
-              className=" img-fluid object-fit-cover  shadow-sm rounded-2 "
+              className=" img-fluid object-fit-contain  shadow-sm rounded-2 "
               src={office}
               alt="office"
             />

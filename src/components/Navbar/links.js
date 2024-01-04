@@ -21,10 +21,6 @@ const projects = {
   icon: ProjectsIcon
 };
 
-const cv = {
-  url:"cv",
-  name: "CV",
-  icon: CVIcon
-};
 
-export const navLinks = [home,about, projects, cv];
+
+export const navLinks = [home,about, projects];
