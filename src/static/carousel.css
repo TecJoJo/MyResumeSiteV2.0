@@ -1,0 +1,38 @@
+.custom-carousel-container{
+    
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--baseLight);
+}
+
+.custom-carousel > img{
+    height: 80px;
+    margin: 0 1rem;
+    
+}
+
+@keyframes slidein {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(-50%);
+    }
+}
+
+.custom-carousel-container:hover .custom-carousel{
+    animation-play-state: paused;
+}
+
+.custom-carousel{
+    
+    display: inline-block;
+    animation: slidein 10s linear infinite  ;
+    z-index: 2;
+}
+
+.black-and-white-filter {   
+    filter: grayscale(0%);
+  }
