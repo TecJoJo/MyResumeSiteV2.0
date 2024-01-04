@@ -23,8 +23,8 @@ The project is still under development.
 
 # Future Plans
 
-- [ ] Notification bar for the development status
-- [ ] Stack icons carousel
+- [x] Notification bar for the development status
+- [x] Stack icons carousel
 - [ ] Contact page redesign
 - [ ] Backend support for the contact page
 
