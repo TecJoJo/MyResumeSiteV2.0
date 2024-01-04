@@ -20,14 +20,10 @@ function Contact() {
           target="blank"
           ref={form}
         >
-          <p>Send me a message</p>
-          <input type="text" name="name" placeholder="Full name" />
+          <p className=" merriweather h4">Send me a message</p>
+          <input  type="text" name="name" placeholder="Full name" />
           <input type="text" name="email" placeholder="Your email" />
-          <input
-            type="text"
-            name="company"
-            placeholder="Phone(not necessary)"
-          />
+          
           <textarea
             className="form-textarea"
             name="message"
@@ -37,7 +33,8 @@ function Contact() {
             placeholder="Your message goes here"
           ></textarea>
           <button
-            className="form-submit"
+            
+            className="form-submit btn btn-primary"
             type="button"
             onClick={() => {
               setShowConfirmDialogue(true);
@@ -51,7 +48,7 @@ function Contact() {
           {showConfirmDialogue && (
             <div className="form-dialogue">
               <p>Are you sure you want submit?</p>
-              <button type="button" onClick={submit}>
+              <button disabled type="button" onClick={submit}>
                 Yes
               </button>
               <button type="button" onClick={hideDialogue}>

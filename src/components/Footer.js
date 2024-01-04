@@ -43,13 +43,13 @@ function Footer() {
           <h4>Get in touch</h4>
           <div className="footer-icon-container">
             <a href="https://www.hamk.fi/" target="_blank">
-              <FontAwesomeIcon icon={faFacebook} className="icon" />
+              <FontAwesomeIcon icon={faFacebook} className="old-icon" />
             </a>{" "}
             <a href="https://www.linkedin.com/in/yao-lu-2022it" target="_blank">
-              <FontAwesomeIcon icon={faLinkedin} className="icon" />
+              <FontAwesomeIcon icon={faLinkedin} className="old-icon" />
             </a>{" "}
             <a href="https://github.com/TecJoJo" target="_blank">
-              <FontAwesomeIcon icon={faGithub} className="icon" />
+              <FontAwesomeIcon icon={faGithub} className="old-icon" />
             </a>
           </div>
         </div>

@@ -32,10 +32,11 @@ function Landing() {
         </div>
 
         <div className="row d-flex  justify-content-center ">
-          <NavLink to="contact" className=" d-flex justify-content-center nav-link  ">
-            <div
-              
-              className="btn overflow-visible  btn-primary text-nowrap   rounded-5   d-flex align-items-center  justify-content-center  py-2  "
+        
+          <div className="d-flex justify-content-center nav-link">
+            <NavLink
+              to="contact"
+              className="  btn overflow-visible  btn-primary text-nowrap   rounded-5   d-flex align-items-center  justify-content-center  py-2   "
             >
               <h2>Contact me</h2>
               <svg
@@ -51,8 +52,8 @@ function Landing() {
                 <line x1="14.31" y1="26.33" x2="32.17" y2="26.33" />
                 <line x1="14.31" y1="33.75" x2="38.58" y2="33.75" />
               </svg>
-            </div>
-          </NavLink>
+            </NavLink>
+          </div>
         </div>
       </section>
     </>
