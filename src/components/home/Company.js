@@ -7,7 +7,7 @@ function Company() {
     <>
     <div className=' container-lg my-5  '>
       <div className=' row justify-content-center  '>
-        <h2 className='col-6 gradient-text-bb'>{companiesWorked}</h2>
+        <h2 className='col-6 gradient-text-bb'>{companiesWorked.defaultMessage}</h2>
         <div className='row justify-content-center '>
           <img className='col-5  object-fit-contain  ' src={company} alt="" />
           {/* <img className='col-5  object-fit-contain  ' src={logical} alt="" /> */}

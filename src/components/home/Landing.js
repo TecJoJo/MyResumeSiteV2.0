@@ -1,7 +1,9 @@
 import React from "react";
-import { welcome, headline, secondary } from "./messages";
+import { welcome, headline, secondaryIntro } from "./messages";
 import office from "../../sources/office-932926_1920.jpg";
 import { NavLink } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+import { selfIntroduction } from "./messages";
 
 import "../../static/landing.css";
 function Landing() {
@@ -15,10 +17,16 @@ function Landing() {
               <h5 className="merriweather">Welcome to my website</h5>
             </div>
             <div>
-              <h2 className="merriweather display-6 ">{headline}</h2>
+              <h2 className="merriweather display-6 ">
+                <FormattedMessage 
+                  id={selfIntroduction.id}     
+                  description={selfIntroduction.description}
+                  defaultMessage={selfIntroduction.defaultMessage}         
+                />
+              </h2>
             </div>
             <div>
-              <small className="merriweather">{secondary}</small>
+              <small className="merriweather">{secondaryIntro.defaultMessage}</small>
             </div>
           </div>
 

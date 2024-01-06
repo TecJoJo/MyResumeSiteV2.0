@@ -27,7 +27,7 @@ function StackCarousel() {
   return (
     <>
       <div >
-        <h2 className=" text-center gradient-text-by">{techToolUsed}</h2>
+        <h2 className=" text-center gradient-text-by">{techToolUsed.defaultMessage}</h2>
         <div className="custom-carousel-container py-5  ">
           <div className="custom-carousel black-and-white-filter">
             {stackLogos.map((logo, index) => {

@@ -5,12 +5,13 @@ import './static/index.css';
 import "./static/header.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {IntlProvider} from "react-intl"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+  <IntlProvider locale='en' defaultLocale='en'>
     <App />
- 
+  </IntlProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
