@@ -6,7 +6,36 @@ import languageIcon from "../../sources/icons/earth.svg";
 import "../../static/header.css"
 import CVIcon from "../icons/CVIcon";
 import cv from "../../sources/YaoLuCV.pdf"
-function Navbar() {
+import { useState, useEffect } from "react";
+function Navbar({setUserLanguage}) {
+
+
+
+  const [languageSelectionsIsOpen,setLanguageSelectionsIsOpen] = useState(false)
+  const [language,SetLanguage] = useState("EN")
+
+  const toggleLanguageSelections = ()=>{
+    setLanguageSelectionsIsOpen(!languageSelectionsIsOpen)
+  }
+
+  const handleLanguageSelection = (e)=>{
+    console.log(e);
+    const pickedLanguage = e.target.innerText
+    SetLanguage(pickedLanguage)
+    
+  }
+
+  useEffect(()=>{
+    setUserLanguage(language)
+  },[language])
+
+  const languageBtns = [
+    "EN","FI","ZH"
+
+  ]
+
+  const visibleBtns = languageBtns.filter((btn)=>btn === language )
+
   return (
     <nav className=" container-fluid   bg-body border-bottom ">
       <div className="row justify-content-between align-items-center ">
@@ -55,7 +84,18 @@ function Navbar() {
         <h4 className="col-md-4 d-md-block   d-none  text-nowrap hand-writing gradient-text-by">Practice makes perfect</h4>
         <div className=" d-flex align-items-center col-2 justify-content-end ">
           <img className="header-icon"   src={languageIcon} alt="language Icon" />
-          <p className="btn btn-outline-dark  m-0 p-0 small ">EN</p>
+          <div className=" btn-group" onClick={toggleLanguageSelections}>
+            {
+            languageSelectionsIsOpen?
+            languageBtns.map((btn)=>{
+              return <p key={btn} onClick={handleLanguageSelection} className="btn btn-outline-dark  m-0 p-0 small ">{btn}</p>
+            })
+            :
+            visibleBtns.map((btn)=>{
+              return <p key={btn} className="btn btn-outline-dark  m-0 p-0 small ">{btn}</p>
+            })
+            }
+          </div>
         </div>
       
       </div>
