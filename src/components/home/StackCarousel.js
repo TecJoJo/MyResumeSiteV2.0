@@ -10,6 +10,7 @@ import react from "../../sources/stackLogos/react.png";
 import typeScript from "../../sources/stackLogos/typescript.png";
 import python from "../../sources/stackLogos/python-logo-master-flat.png";
 import "../../static/carousel.css";
+import { FormattedMessage } from "react-intl";
 
 const stackLogos = [
   figma,
@@ -27,7 +28,11 @@ function StackCarousel() {
   return (
     <>
       <div >
-        <h2 className=" text-center gradient-text-by">{techToolUsed.defaultMessage}</h2>
+        <h2 className=" text-center gradient-text-by"><FormattedMessage 
+                  id={techToolUsed.id}     
+                  description={techToolUsed.description}
+                  defaultMessage={techToolUsed.defaultMessage}        
+                /></h2>
         <div className="custom-carousel-container py-5  ">
           <div className="custom-carousel black-and-white-filter">
             {stackLogos.map((logo, index) => {

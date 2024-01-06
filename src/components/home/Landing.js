@@ -1,9 +1,9 @@
 import React from "react";
-import { welcome, headline, secondaryIntro } from "./messages";
+
 import office from "../../sources/office-932926_1920.jpg";
 import { NavLink } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { selfIntroduction } from "./messages";
+import { selfIntroduction,secondaryIntro,welcome1,welcome2 } from "./messages";
 
 import "../../static/landing.css";
 function Landing() {
@@ -13,8 +13,16 @@ function Landing() {
         <div className="row  align-items-stretch mb-5">
           <div className="col-md-6 d-flex  flex-column justify-content-between  ">
             <div className="gradient-text-bb">
-              <h5 className="merriweather">Hi, there!</h5>
-              <h5 className="merriweather">Welcome to my website</h5>
+              <h5 className="merriweather"><FormattedMessage 
+                  id={welcome1.id}     
+                  description={welcome1.description}
+                  defaultMessage={welcome1.defaultMessage}         
+                /></h5>
+              <h5 className="merriweather"><FormattedMessage 
+                  id={welcome2.id}     
+                  description={welcome2.description}
+                  defaultMessage={welcome2.defaultMessage}         
+                /></h5>
             </div>
             <div>
               <h2 className="merriweather display-6 ">
@@ -26,7 +34,11 @@ function Landing() {
               </h2>
             </div>
             <div>
-              <small className="merriweather">{secondaryIntro.defaultMessage}</small>
+              <small className="merriweather"><FormattedMessage 
+                  id={secondaryIntro.id}     
+                  description={secondaryIntro.description}
+                  defaultMessage={secondaryIntro.defaultMessage}        
+                /></small>
             </div>
           </div>
 

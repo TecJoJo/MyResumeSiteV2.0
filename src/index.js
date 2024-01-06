@@ -6,10 +6,32 @@ import "./static/header.css"
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {IntlProvider} from "react-intl"
+import fi from "./translations/fi.json"
+import zh from "./translations/zh.json"
+
+
+//zh-CN en-US 
+const messages = {
+    fi : fi,
+    zh: zh,
+    
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const findLanguage = (language)=>{
+    if(language.startsWith("zh")){
+        return "zh"
+    }
+    else return language
+}
+console.log("navagator language:",navigator.language);
+const language = navigator.language
+const languageWithoutCountry = findLanguage(navigator.language)
+console.log("languageWithoutCountry",languageWithoutCountry);
+
 root.render(
-  <IntlProvider locale='en' defaultLocale='en'>
+  <IntlProvider locale={language} defaultLocale='en' messages={messages[languageWithoutCountry]}>
     <App />
   </IntlProvider>
 );
