@@ -25,10 +25,11 @@ The project is still under development.
 - [ ] Contact page redesign
 - [ ] Backend support for the contact page
 
-### Design & Coding by Yao Lu
-From Hämeen University of Applied Sciences, Finland.
 
 # About the previous version 1.0
 To check out the V1.0:
 - [GitHub Repository](https://github.com/TecJoJo/MyReactResumeWebsite)
 - [Live Website](https://welcome-to-yao-website.netlify.app/)
+
+### Design & Coding by Yao Lu
+From Hämeen University of Applied Sciences, Finland.
