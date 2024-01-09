@@ -39,7 +39,7 @@ function Navbar({setUserLanguage}) {
   return (
     <nav className=" container-fluid   bg-body border-bottom ">
       <div className="row justify-content-between align-items-center ">
-        <div className=" col-6 ">
+        <div className="  col-md-6 ">
           <ul style={{marginBottom:"0"}} className="d-flex  flex-row  align-content-center list-unstyled  ">
             {navLinks.map((link, index) => {
               return (
@@ -82,21 +82,21 @@ function Navbar({setUserLanguage}) {
           </ul>
         </div>
         <h4 className="col-md-4 d-md-block   d-none  text-nowrap hand-writing gradient-text-by">Practice makes perfect</h4>
-        <div className=" d-flex align-items-center col-2 justify-content-end ">
+        <div className=" d-flex align-items-center col-md-2 justify-content-start ">
           <img className="header-icon"   src={languageIcon} alt="language Icon" />
           <div className=" btn-group" onClick={toggleLanguageSelections}>
             {
             languageSelectionsIsOpen?
             languageBtns.map((btn)=>{
-              return <p key={btn} onClick={handleLanguageSelection} className="btn btn-outline-dark  m-0 p-0 small ">{btn}</p>
+              return <p key={btn} onClick={handleLanguageSelection} className="btn btn-outline-dark  m-0 p-0 small languagebtn">{btn}</p>
             })
             :
             visibleBtns.map((btn)=>{
-              return <p key={btn} className="btn btn-outline-dark  m-0 p-0 small ">{btn}</p>
+              return <p key={btn} className="btn btn-outline-dark  m-0 p-0 small languagebtn ">{btn}</p>
             })
             }
           </div>
-        </div>
+        </div>  
       
       </div>
     </nav>

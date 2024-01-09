@@ -3,3 +3,8 @@
     height: 1.5rem; 
     color:var(--textPrimary)
   }
+
+.languagebtn{
+  display: inline-block;
+  width: 1.5rem;
+}
