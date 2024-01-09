@@ -15,7 +15,7 @@ function Company() {
                   defaultMessage={companiesWorked.defaultMessage}         
                 /></h2>
         <div className='row justify-content-center '>
-          <img className='col-5  object-fit-contain  ' src={company} alt="" />
+          <img className='col-5  object-fit-contain  ' src={company} alt="Beamex Oy" />
           {/* <img className='col-5  object-fit-contain  ' src={logical} alt="" /> */}
         </div>
       </div>
