@@ -25,7 +25,7 @@ function Landing() {
                 /></h5>
             </div>
             <div>
-              <h2 className="merriweather display-6  text-wrap ">
+              <h2 className="merriweather display-6  text-break ">
                 <FormattedMessage 
                   id={selfIntroduction.id}     
                   description={selfIntroduction.description}

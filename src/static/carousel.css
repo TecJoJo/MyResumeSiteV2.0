@@ -25,11 +25,20 @@
 .custom-carousel-container:hover .custom-carousel{
     animation-play-state: paused;
 }
+.custom-carousel-container:hover .custom-carousel-slow{
+    animation-play-state: paused;
+}
 
 .custom-carousel{
     
     display: inline-block;
     animation: slidein 10s linear infinite  ;
+    z-index: 2;
+}
+.custom-carousel-slow{
+    
+    display: inline-block;
+    animation: slidein 20s linear infinite  ;
     z-index: 2;
 }
 

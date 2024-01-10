@@ -24,6 +24,7 @@ The project is still under development.
 
 - [ ] Contact page redesign
 - [ ] Backend support for the contact page
+- [ ] Projects section redesign with smoothScroll feature(work in progress)
 
 
 # About the previous version 1.0

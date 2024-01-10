@@ -35,7 +35,7 @@ const techToolUsed = {
 const info1 = {
     id: "home.info1",
     description: "Project status",
-    defaultMessage: "The project is still under development, portfolio project v1.0 entry"
+    defaultMessage: "The project is still under development,currently working on projects-page, portfolio project v1.0 entry"
 }
 
 const info2 = {

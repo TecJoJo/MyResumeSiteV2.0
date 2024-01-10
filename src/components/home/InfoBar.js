@@ -7,7 +7,7 @@ function InfoBar() {
   return (
     <div className='custom-carousel-container container-fluid bg-warning-subtle  '>
         
-        <div className="custom-carousel">
+        <div className="custom-carousel-slow">
         
         <img className = "icon"src={horn} alt="horn" style={{height:"2rem",width:"2rem"}}/>
         {" "}<span><FormattedMessage 
