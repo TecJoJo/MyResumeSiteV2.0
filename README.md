@@ -21,7 +21,7 @@ The project is still under development.
 
 # Future Plans
 
-
+- [ ] projects page redesign
 - [ ] Contact page redesign
 - [ ] Backend support for the contact page
 
