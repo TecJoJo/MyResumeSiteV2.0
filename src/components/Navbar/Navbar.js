@@ -19,7 +19,7 @@ function Navbar({setUserLanguage}) {
   }
 
   const handleLanguageSelection = (e)=>{
-    console.log(e);
+    
     const pickedLanguage = e.target.innerText
     SetLanguage(pickedLanguage)
     

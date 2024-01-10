@@ -5,59 +5,54 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 // import Home from "./components/Home";
 import HomeContainer from "./components/home/HomeContainer";
-import Projects from "./components/Projects";
+import Projects from "./components/projects/Projects";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
-import {IntlProvider} from "react-intl"
-import fi from "./translations/fi.json"
-import zh from "./translations/zh.json"
+import { IntlProvider } from "react-intl";
+import fi from "./translations/fi.json";
+import zh from "./translations/zh.json";
 import { useState } from "react";
 
-//zh-CN en-US 
+//zh-CN en-US
 const messages = {
-  fi : fi,
+  fi: fi,
   zh: zh,
-  
-}
-const findLanguage = (language)=>{
-  if(language.toLowerCase().startsWith("zh")){
-      return "zh"
-  }
-  else return language
-}
+};
+const findLanguage = (language) => {
+  if (language.toLowerCase().startsWith("zh")) {
+    return "zh";
+  } else return language;
+};
 
-const language = navigator.language
-const languageWithoutCountry = findLanguage(navigator.language)
-
+const language = navigator.language;
+const languageWithoutCountry = findLanguage(navigator.language);
 
 function App() {
-
-  let [userLanguage, setUserLanguage] = useState(languageWithoutCountry)
+  let [userLanguage, setUserLanguage] = useState(languageWithoutCountry);
   console.log(userLanguage);
 
-  userLanguage = userLanguage.toLowerCase()
+  userLanguage = userLanguage.toLowerCase();
 
   return (
-
     // problem, locale setting format is now missing country indictor...
-    //findlanguage will parse the EN Fi to lowercase first and then match the right translation file. 
-    <IntlProvider locale={userLanguage} defaultLocale='en' messages={messages[findLanguage(userLanguage)]}>
-    <Router>
-      <Navbar setUserLanguage={setUserLanguage} />
-      <Routes>
-        <Route path="/" element={<HomeContainer />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+    //findlanguage will parse the EN Fi to lowercase first and then match the right translation file.
+    <IntlProvider
+      locale={userLanguage}
+      defaultLocale="en"
+      messages={messages[findLanguage(userLanguage)]}
+    >
+      <Router>
+        <Navbar setUserLanguage={setUserLanguage} />
+        <Routes>
+          <Route path="/" element={<HomeContainer />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </Router>
     </IntlProvider>
   );
 }
-
-
-       
-    
 
 export default App;

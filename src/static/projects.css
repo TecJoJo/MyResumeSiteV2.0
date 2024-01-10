@@ -1,0 +1,58 @@
+.projects-main-container{
+
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    justify-content: end;
+}
+
+.projects-container-left{
+    width: 20%;
+    background: var(--textSecondary);
+    height:60vh;
+    left:0;
+    position: fixed;
+    top:20vh;
+}
+
+
+
+.projects-container-left p{
+    height:15vh;
+    color: white;
+    margin: 0;  
+    cursor: pointer;
+}   
+
+.highlight{
+    background-color: red;
+}
+
+.projects-container-left p{
+    height:15vh;
+    color: white;
+    margin: 0;  
+    cursor: pointer;
+}   
+.projects-container-right{
+    width: 80%;
+    background: var(--pureWhite);
+    
+}
+
+.projects-box{
+    height:80vh;
+    font-size: 5rem;
+    color:white;
+    
+    
+}
+
+.projects-box div {
+    
+    margin:auto;
+    width:10rem;
+    
+}
+
+
