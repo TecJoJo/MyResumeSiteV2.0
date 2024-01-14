@@ -7,7 +7,7 @@ import InfoBar from './InfoBar'
 function HomeContainer() {
   return (
     <>
-    <InfoBar/>
+    {/* <InfoBar/> */}
     <Landing/>
     <Company/>
     <StackCarousel/>

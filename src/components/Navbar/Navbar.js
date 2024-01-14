@@ -7,6 +7,8 @@ import "../../static/header.css"
 import CVIcon from "../icons/CVIcon";
 import cv from "../../sources/YaoLuCV.pdf"
 import { useState, useEffect } from "react";
+import brush from "../../sources/brushBlueCentered2.png"
+import blackBrush from "../../sources/blackStroke111.png"
 function Navbar({setUserLanguage}) {
 
 
@@ -37,31 +39,31 @@ function Navbar({setUserLanguage}) {
   const visibleBtns = languageBtns.filter((btn)=>btn === language )
 
   return (
-    <nav className=" container-fluid   bg-body border-bottom ">
+    <nav className="header-bar container-fluid   bg-body border-bottom ">
       <div className="row justify-content-between align-items-center ">
         <div className="  col-md-6 ">
           <ul style={{marginBottom:"0"}} className="d-flex  flex-row  align-content-center list-unstyled  ">
             {navLinks.map((link, index) => {
               return (
                 <li key={index} className=" text-decoration-none">
-                  <NavLink
-                    to={link.url}
-                    className="d-flex justify-content-center align-items-center nav-link  "
+                  <button
+                    // to={link.url} used to be navLink, after redesign the react dom is not going to be used any more, the multiple page design is not cool
+                    className="d-flex justify-content-center align-items-center nav-link position-relative header-button "
                   >
-
+                    <img src={brush} alt="brush background" />
                     <div className="d-flex align-items-center ">
                     <div>
                         <small>{link.name}</small>
                       </div>
                       
-                      <div className="me-1"><link.icon className={"header-icon"}/></div>
-                      <SplitLine/>
+                      <div className="me-3"><link.icon className={"header-icon"}/></div>
+                      {/* <SplitLine/> */}
                     </div>
-                  </NavLink>
+                  </button>
                 </li>
               );
             })}
-            <li className=" text-decoration-none">
+            {/* <li className=" text-decoration-none">
                   <div
                     
                     className="d-flex justify-content-center align-items-center nav-link  "
@@ -78,7 +80,7 @@ function Navbar({setUserLanguage}) {
                     </div>
                     </a>
                   </div>
-                </li>
+                </li> */}
           </ul>
         </div>
         <h4 className="col-md-4 d-md-block   d-none  text-nowrap hand-writing gradient-text-by">Practice makes perfect</h4>

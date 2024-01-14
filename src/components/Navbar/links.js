@@ -2,6 +2,7 @@ import AboutIcon from "../icons/AboutIcon";
 import CVIcon from "../icons/CVIcon";
 import ProjectsIcon from "../icons/ProjectsIcon";
 import HomeIcon from "../icons/HomeIcon";
+import ContactIcon from "../icons/ContactIcon";
 
 const home = {
   url:"/",
@@ -21,6 +22,12 @@ const projects = {
   icon: ProjectsIcon
 };
 
+const contact = {
+  url:"contact",
+  name: "Contact",
+  icon: ContactIcon
+};
 
 
-export const navLinks = [home,about, projects];
+
+export const navLinks = [home,about, projects,contact];
