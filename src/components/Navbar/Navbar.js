@@ -27,6 +27,10 @@ function Navbar({setUserLanguage}) {
     
   }
 
+  const handleScrollDestination = ()=>{
+    
+  }
+
   useEffect(()=>{
     setUserLanguage(language)
   },[language])
@@ -48,6 +52,7 @@ function Navbar({setUserLanguage}) {
                 <li key={index} className=" text-decoration-none">
                   <button
                     // to={link.url} used to be navLink, after redesign the react dom is not going to be used any more, the multiple page design is not cool
+                    onClick={handleScrollDestination}
                     className="d-flex justify-content-center align-items-center nav-link position-relative header-button "
                   >
                     <img src={brush} alt="brush background" />

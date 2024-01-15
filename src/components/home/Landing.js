@@ -9,7 +9,7 @@ import "../../static/landing.css";
 function Landing() {
   return (
     <>
-      <section className=" container-lg  py-5  position-relative border-bottom  ">
+      <section id="landing" className=" container-lg  py-5  position-relative border-bottom  ">
         <div className="row  align-items-stretch mb-5">
           <div className="col-md-6 d-flex  flex-column justify-content-between  ">
             <div className="gradient-text-bb">

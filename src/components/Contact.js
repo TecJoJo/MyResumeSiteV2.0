@@ -12,7 +12,7 @@ function Contact() {
 
   return (
     <>
-      <div className="contact-container">
+      <div id="contact" className="contact-container">
         <form
           className="contact-form"
           action={`${process.env.REACT_APP_ENDPOINT}`}
