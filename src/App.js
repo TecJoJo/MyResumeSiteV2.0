@@ -12,6 +12,7 @@ import {IntlProvider} from "react-intl"
 import fi from "./translations/fi.json"
 import zh from "./translations/zh.json"
 import { useState } from "react";
+import ScrollNavProvider from "../src/context/ScrollNavContext"
 
 //zh-CN en-US 
 const messages = {
@@ -33,7 +34,7 @@ const languageWithoutCountry = findLanguage(navigator.language)
 function App() {
 
   let [userLanguage, setUserLanguage] = useState(languageWithoutCountry)
-  console.log(userLanguage);
+  
 
   userLanguage = userLanguage.toLowerCase()
 
@@ -42,6 +43,7 @@ function App() {
     // problem, locale setting format is now missing country indictor...
     //findlanguage will parse the EN Fi to lowercase first and then match the right translation file. 
     <IntlProvider locale={userLanguage} defaultLocale='en' messages={messages[findLanguage(userLanguage)]}>
+      <ScrollNavProvider>
     <Router>
       <Navbar setUserLanguage={setUserLanguage} />
       <Routes>
@@ -52,6 +54,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </ScrollNavProvider>
     </IntlProvider>
   );
 }

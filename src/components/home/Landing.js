@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import {ScrollNavContext} from "../../context/ScrollNavContext"
 
 import office from "../../sources/office-932926_1920.jpg";
 import { NavLink } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import { selfIntroduction,secondaryIntro,welcome1,welcome2 } from "./messages";
+import useTargetDiv from "../../hooks/useTargetDiv"
 
 import "../../static/landing.css";
 function Landing() {
+  const [targetDiv, targetDivs] = useTargetDiv()
+  
+  console.log(targetDivs);
+  
   return (
     <>
-      <section id="landing" className=" container-lg  py-5  position-relative border-bottom  ">
+      <section ref={targetDiv} id="landing" className=" container-lg  py-5  position-relative border-bottom  ">
         <div className="row  align-items-stretch mb-5">
           <div className="col-md-6 d-flex  flex-column justify-content-between  ">
             <div className="gradient-text-bb">

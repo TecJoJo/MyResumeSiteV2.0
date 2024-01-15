@@ -11,7 +11,17 @@ import brush from "../../sources/brushBlueCentered2.png"
 import blackBrush from "../../sources/blackStroke111.png"
 function Navbar({setUserLanguage}) {
 
+  //I want a custom hook to: 
+  //return the ref of the divs to the right section 
+  //useTargetDiv return {projects:<div>projects</div>}
 
+  //I also need a custom hook to monitor the intersection state of the divs
+  //useSectionOnScreen
+  //return OnScreenDivName: string 
+  
+
+  //with this i can highlight the active button 
+  // <img src={brush} className={(link.name===OnScreenDivName)&&"active"} alt="brush background" />
 
   const [languageSelectionsIsOpen,setLanguageSelectionsIsOpen] = useState(false)
   const [language,SetLanguage] = useState("EN")
@@ -28,7 +38,7 @@ function Navbar({setUserLanguage}) {
   }
 
   const handleScrollDestination = ()=>{
-    
+
   }
 
   useEffect(()=>{
@@ -55,7 +65,7 @@ function Navbar({setUserLanguage}) {
                     onClick={handleScrollDestination}
                     className="d-flex justify-content-center align-items-center nav-link position-relative header-button "
                   >
-                    <img src={brush} alt="brush background" />
+                    <img src={brush}  alt="brush background" />
                     <div className="d-flex align-items-center ">
                     <div>
                         <small>{link.name}</small>
