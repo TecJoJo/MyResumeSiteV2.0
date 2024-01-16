@@ -9,9 +9,9 @@ import useTargetDiv from "../../hooks/useTargetDiv"
 
 import "../../static/landing.css";
 function Landing() {
-  const [targetDiv, targetDivs] = useTargetDiv()
+  const targetDiv = useTargetDiv()
   
-  console.log(targetDivs);
+  
   
   return (
     <>

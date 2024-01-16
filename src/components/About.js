@@ -1,9 +1,13 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
+import useTargetDiv from "../hooks/useTargetDiv"
+
 
 function About() {
+  const targetDiv = useTargetDiv()
+  
   return (
-    <div id="about" className="about-container">
+    <div ref={targetDiv} id="about" className="about-container">
       <section className="">
         <h1 className=" text-center merriweather ">About me</h1>
 

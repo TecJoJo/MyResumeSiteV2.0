@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
-
+import useTargetDiv from "../hooks/useTargetDiv"
 function Contact() {
+  const targetDiv = useTargetDiv()
   const [showConfirmDialogue, setShowConfirmDialogue] = useState(false);
   const form = useRef(null);
   const submit = () => {
@@ -12,7 +13,7 @@ function Contact() {
 
   return (
     <>
-      <div id="contact" className="contact-container">
+      <div ref={targetDiv} id="contact" className="contact-container">
         <form
           className="contact-form"
           action={`${process.env.REACT_APP_ENDPOINT}`}

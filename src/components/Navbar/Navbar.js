@@ -6,14 +6,18 @@ import languageIcon from "../../sources/icons/earth.svg";
 import "../../static/header.css"
 import CVIcon from "../icons/CVIcon";
 import cv from "../../sources/YaoLuCV.pdf"
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import brush from "../../sources/brushBlueCentered2.png"
 import blackBrush from "../../sources/blackStroke111.png"
+import { ScrollNavContext } from "../../context/ScrollNavContext";
 function Navbar({setUserLanguage}) {
 
   //I want a custom hook to: 
   //return the ref of the divs to the right section 
   //useTargetDiv return {projects:<div>projects</div>}
+
+
+  //--> useTargetDiv wont return div, but the ScrollNavContext is going to track the divs
 
   //I also need a custom hook to monitor the intersection state of the divs
   //useSectionOnScreen
@@ -23,6 +27,8 @@ function Navbar({setUserLanguage}) {
   //with this i can highlight the active button 
   // <img src={brush} className={(link.name===OnScreenDivName)&&"active"} alt="brush background" />
 
+  const {targetDivs,setTargetDivs} = useContext(ScrollNavContext)
+  console.log(targetDivs);
   const [languageSelectionsIsOpen,setLanguageSelectionsIsOpen] = useState(false)
   const [language,SetLanguage] = useState("EN")
 
@@ -37,8 +43,8 @@ function Navbar({setUserLanguage}) {
     
   }
 
-  const handleScrollDestination = ()=>{
-
+  const handleScrollDestination = (targetDivId)=>{
+    targetDivs[targetDivId].div.scrollIntoView({behavior:'smooth'})
   }
 
   useEffect(()=>{
@@ -62,10 +68,10 @@ function Navbar({setUserLanguage}) {
                 <li key={index} className=" text-decoration-none">
                   <button
                     // to={link.url} used to be navLink, after redesign the react dom is not going to be used any more, the multiple page design is not cool
-                    onClick={handleScrollDestination}
-                    className="d-flex justify-content-center align-items-center nav-link position-relative header-button "
+                    onClick={()=>handleScrollDestination(link.targetDivId)}
+                    className="d-flex justify-content-center align-items-center nav-link position-relative header-button"
                   >
-                    <img src={brush}  alt="brush background" />
+                    <img src={brush} className={targetDivs[link.targetDivId]?.onScreen ? "isActive":""} alt="brush background" />
                     <div className="d-flex align-items-center ">
                     <div>
                         <small>{link.name}</small>

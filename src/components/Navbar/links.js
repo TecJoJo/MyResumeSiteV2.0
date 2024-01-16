@@ -7,25 +7,29 @@ import ContactIcon from "../icons/ContactIcon";
 const home = {
   url:"/",
   name: "Home",
-  icon:HomeIcon
+  icon:HomeIcon,
+  targetDivId:"landing",
 }
 
 const about = {
   url:"about",
   name: "About",
-  icon: AboutIcon
+  icon: AboutIcon,
+  targetDivId:"about",
 }
 
 const projects = {
   url:"projects",
   name: "Projects",
-  icon: ProjectsIcon
+  icon: ProjectsIcon,
+  targetDivId:"projects",
 };
 
 const contact = {
   url:"contact",
   name: "Contact",
-  icon: ContactIcon
+  icon: ContactIcon,
+  targetDivId:"contact",
 };
 
 

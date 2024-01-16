@@ -3,26 +3,36 @@
 
 import React, { useContext } from 'react'
 import { useRef,useEffect } from 'react'
-import { ScrollNavContext } from '../context/ScrollNavContext'
+import {ScrollNavContext} from '../context/ScrollNavContext'
 function useTargetDiv() {
     const {targetDivs,setTargetDivs} = useContext(ScrollNavContext)
-    
     const targetDiv = useRef(null)
     
-    
     useEffect(() => {
+        
+        const key = targetDiv.current.id;
+        const observer = new IntersectionObserver(([object])=>{
+            setTargetDivs((prevDivs)=>({
+                ...prevDivs,
+                [key]:{...prevDivs[key],onScreen:object.isIntersecting}
+            }))
+        },{threshold:0.5})
+
+        observer.observe(targetDiv.current)
+
       if (targetDiv.current) {
-          const key = targetDiv.current.id;
+          
           setTargetDivs((prevDivs) => ({
               ...prevDivs,
-              [key]: targetDiv.current,
+              [key]: {...prevDivs[key],div:targetDiv.current},
           }));
       }
-  }, [targetDiv]);
+      return () => observer.disconnect()
+  }, [targetDiv,setTargetDivs]);
   
     
     
-  return [targetDiv,targetDivs]
+  return targetDiv
     
 }
 
