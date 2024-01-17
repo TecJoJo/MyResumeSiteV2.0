@@ -14,8 +14,8 @@ function HomeContainer() {
     <About/>
     <Company/>
     <StackCarousel/>
-    <Contact/>
     <Projects/>
+    <Contact/>
     </>
     
   )
