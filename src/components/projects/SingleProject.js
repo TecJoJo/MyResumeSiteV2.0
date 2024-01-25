@@ -10,7 +10,7 @@ function SingleProject({img, isDarkBackGround,title,description}) {
         </div>
       </div>
       <div className=" col-md-5 d-flex flex-column justify-content-center">
-        <h3 className=' mb-2 '>{title}</h3>
+        <h3 className={`mb-2 merriweather ${isDarkBackGround?"gradient-text-wy":"gradient-text-bb"} `} >{title}</h3>
         <p className=' mt-2 '>
           {description}
         </p>

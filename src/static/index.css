@@ -42,6 +42,7 @@
   --BlueYellowGradient: linear-gradient(to right, var(--primaryColor), var(--secondaryColor));
   --BlueBlueGradient: linear-gradient(to right, var(--textSecondary), var(--primaryColor));
   --DarkGradient: linear-gradient(to right, #232526 ,#414345);
+  --WhiteYellowGradient:linear-gradient(to right, #FFFFFF ,#E1DF9E);
   /* bootstrap class overwrite */
   
 }
@@ -70,6 +71,14 @@
   
   
   background: var(--BlueYellowGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+} 
+.gradient-text-wy{
+  
+  
+  background: var(--WhiteYellowGradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
