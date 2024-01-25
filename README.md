@@ -14,6 +14,7 @@ The site is hosted on Netlify. You can check it out [here](https://tecjojo.netli
 - React intl, website change between developer's three language english, finnish and chinese base on the browser's language setting and user's selection.
 - Notification bar for the development status
 - Stack icons carousel
+- Projects section redesign with smoothScroll feature
 
 # Development Status
 
@@ -24,7 +25,7 @@ The project is still under development.
 
 - [ ] Contact page redesign
 - [ ] Backend support for the contact page
-- [ ] Projects section redesign with smoothScroll feature(work in progress)
+- [ ] Bug fix, Notification bar is hided. Smooth scroll positioning problem  
 
 
 # About the previous version 1.0
