@@ -43,7 +43,11 @@
 @media screen and (max-width: 960px) {
     .single-project h3, .single-project p {
         width: 100%;
-        color: var(--textPrimary)
+        
+    }
+    .single-project.dark-background h3, .single-project.dark-background p {
+        width: 100%;
+        
     }
 }
 

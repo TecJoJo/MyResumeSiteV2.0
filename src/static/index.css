@@ -277,6 +277,12 @@ body{
   margin: auto;
 }
 
+.footer-icon {
+  width: 1.5rem; 
+  height: 1.5rem; 
+  color:var(--pureWhite)
+}
+
 @media all and (max-width:760px) {
   .footer-control {
     flex-direction: column;
