@@ -41,7 +41,7 @@
   /* gradients */
   --BlueYellowGradient: linear-gradient(to right, var(--primaryColor), var(--secondaryColor));
   --BlueBlueGradient: linear-gradient(to right, var(--textSecondary), var(--primaryColor));
-
+  --DarkGradient: linear-gradient(to right, #232526 ,#414345);
   /* bootstrap class overwrite */
   
 }

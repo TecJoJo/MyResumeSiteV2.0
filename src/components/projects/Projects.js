@@ -11,8 +11,8 @@ function Projects() {
  
   return (
     <div ref={targetDiv} id='projects' className='projects-container'>
-      <SingleProject img={resume}/>
-      <SingleProject img={gallery}/>
+      <SingleProject img={resume} isDarkBackGround={false}/>
+      <SingleProject img={gallery} isDarkBackGround={true}/>
     </div>
   )
 }
