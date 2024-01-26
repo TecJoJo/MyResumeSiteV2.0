@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { navLinks } from "./links";
 import { NavLink } from "react-router-dom";
 import SplitLine from "./seperateLine/SeperateLine";
@@ -26,7 +26,7 @@ function Navbar({setUserLanguage}) {
 
   //with this i can highlight the active button 
   // <img src={brush} className={(link.name===OnScreenDivName)&&"active"} alt="brush background" />
-
+  const navBar = useRef(null)
   const {targetDivs,setTargetDivs} = useContext(ScrollNavContext)
   console.log(targetDivs);
   const [languageSelectionsIsOpen,setLanguageSelectionsIsOpen] = useState(false)
@@ -44,7 +44,15 @@ function Navbar({setUserLanguage}) {
   }
 
   const handleScrollDestination = (targetDivId)=>{
-    targetDivs[targetDivId].div.scrollIntoView({behavior:'smooth'})
+    //extract the div from the context api
+    const sectionDiv = targetDivs[targetDivId].div
+    const navBarHeight =  navBar.current.offsetHeight
+    console.log("sectionDiv,navBarHeight",[sectionDiv.offsetTop,navBarHeight]);
+    window.scrollTo({
+      top:sectionDiv.offsetTop - navBarHeight,
+      behavior:"smooth"
+    })
+
   }
 
   useEffect(()=>{
@@ -59,7 +67,7 @@ function Navbar({setUserLanguage}) {
   const visibleBtns = languageBtns.filter((btn)=>btn === language )
 
   return (
-    <nav className="header-bar container-fluid   bg-body border-bottom ">
+    <nav ref={navBar} className="header-bar container-fluid   bg-body border-bottom ">
       <div className="row justify-content-between align-items-center ">
         <div className="  col-md-6 ">
           <ul style={{marginBottom:"0"}} className="d-flex  flex-row  align-content-center list-unstyled  ">

@@ -9,7 +9,7 @@ import Projects from '../projects/Projects'
 function HomeContainer() {
   return (
     <>
-    {/* <InfoBar/> */}
+    <InfoBar/>
     <Landing/>
     <About/>
     <Company/>

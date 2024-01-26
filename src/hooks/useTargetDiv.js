@@ -5,12 +5,13 @@ import React, { useContext } from 'react'
 import { useRef,useEffect } from 'react'
 import {ScrollNavContext} from '../context/ScrollNavContext'
 function useTargetDiv() {
-    const {targetDivs,setTargetDivs} = useContext(ScrollNavContext)
+    const {setTargetDivs} = useContext(ScrollNavContext)
     const targetDiv = useRef(null)
     
     useEffect(() => {
         
         const key = targetDiv.current.id;
+        //create a observer object to observe the div and update the one screen state to the targetDivs object 
         const observer = new IntersectionObserver(([object])=>{
             setTargetDivs((prevDivs)=>({
                 ...prevDivs,
@@ -21,7 +22,7 @@ function useTargetDiv() {
         observer.observe(targetDiv.current)
 
       if (targetDiv.current) {
-          
+          //put the target div into the targetDivs object so we have access globally via context API
           setTargetDivs((prevDivs) => ({
               ...prevDivs,
               [key]: {...prevDivs[key],div:targetDiv.current},

@@ -2,10 +2,11 @@ import React from 'react'
 import { info1,info2 } from './messages'
 import horn from "../../sources/icons/icons8-horn-100.png"
 import { FormattedMessage } from 'react-intl'
+import "../../static/infobar.css"
 
 function InfoBar() {
   return (
-    <div className='custom-carousel-container container-fluid bg-warning-subtle  '>
+    <div className='custom-carousel-container container-fluid bg-warning-subtle info-bar '>
         
         <div className="custom-carousel-slow">
         
